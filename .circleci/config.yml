@@ -24,7 +24,7 @@ jobs:
             ${vm_name}\n
             ${vm_rg_name}\n
             ------------------------------------------------\n
-          failure_message: >
+       - failure_message: >
             BackUpJob が異常終了しました。\n
             パラメータを確認してください。
 
