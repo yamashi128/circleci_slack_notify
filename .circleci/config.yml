@@ -30,3 +30,4 @@ workflows:
   install:
     jobs:
       - slack_test
+          context: slack
