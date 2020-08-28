@@ -16,6 +16,7 @@ jobs:
             echo "export vm_rg_name='$(grep "vm_rg_name" vars/variable.yml)'" >> $BASH_ENV
             source $BASH_ENV
       - slack/notify:
+          webhook: ${SLACK_WEBHOOK}
           color: "#00ff7f"
           message: >
             Azure VM Backup処理が正常終了しました。\n
