@@ -16,7 +16,6 @@ jobs:
             echo "export vm_rg_name='$(grep "vm_rg_name" vars/variable.yml)'" >> $BASH_ENV
             source $BASH_ENV
       - slack/status:
-          color: "#00ff7f"
           success_message: >
             Azure VM Backup が正常に終了しました。\n
             対象リソース\n
