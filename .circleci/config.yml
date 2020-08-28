@@ -18,12 +18,12 @@ jobs:
       - slack/notify:
           color: "#00ff7f"
           message: >
-            Azure VM Backup処理が正常終了しました。\n
+            Azure VM Backup処理が　正常に終了しました。\n
             対象リソース\n
-            -----------------------\n
+            ------------------------------------------------\n
             ${vm_name}\n
             ${vm_rg_name}\n
-            -----------------------\n
+            ------------------------------------------------\n
 workflows:
   version: 2.1
   slack_Notify:
