@@ -9,7 +9,6 @@ jobs:
     docker:
       - image: cimg/base:2023.03
     steps:
-      - checkout
       - run:
           command: |
             # Slackのメッセージに表示させるリソース名を取得
