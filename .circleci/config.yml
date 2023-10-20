@@ -9,9 +9,9 @@ jobs:
     docker:
       - image: cimg/base:2023.03
     steps:
-      - run:
-      - slack/notify:
+    - slack/notify:
           message: 'test message'
+      - run:
           command: |
             # Slackのメッセージに表示させるリソース名を取得
             echo "export vm_name='$(grep "vm_name" vars/variable.yml)'" >> $BASH_ENV
