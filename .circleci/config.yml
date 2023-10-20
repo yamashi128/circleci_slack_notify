@@ -10,14 +10,14 @@ jobs:
       - image: cimg/base:2023.03
     steps:
       - run:
+      - slack/notify:
+          message: 'test message'
           command: |
             # Slackのメッセージに表示させるリソース名を取得
             echo "export vm_name='$(grep "vm_name" vars/variable.yml)'" >> $BASH_ENV
             echo "export vm_rg_name='$(grep "vm_rg_name" vars/variable.yml)'" >> $BASH_ENV
             source $BASH_ENV
-      - run: exit 1
-      - slack/notify:
-          message: 'test message'
+      - run: exit 0
       - slack/status:
           success_message: >
             Azure VM Backup が正常に終了しました。\n
