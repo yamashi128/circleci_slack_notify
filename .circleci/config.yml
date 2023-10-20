@@ -11,6 +11,7 @@ jobs:
     steps:
       - slack/notify:
           message: 'test message'
+          webhook: '${TEST}'
       - run:
           command: |
             # Slackのメッセージに表示させるリソース名を取得
