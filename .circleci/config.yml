@@ -14,6 +14,7 @@ jobs:
           webhook: '${TEST}'
       - run:
           command: |
+            ls -la
             # Slackのメッセージに表示させるリソース名を取得
             echo "export vm_name='$(grep "vm_name" vars/variable.yml)'" >> $BASH_ENV
             echo "export vm_rg_name='$(grep "vm_rg_name" vars/variable.yml)'" >> $BASH_ENV
