@@ -34,7 +34,6 @@ jobs:
             パラメータを確認してください。
 
 workflows:
-  version: 2.1
   slack_Notify:
     jobs:
       - slack_test:
